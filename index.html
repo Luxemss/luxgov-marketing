@@ -77,7 +77,7 @@
     }
 
     .nav-links a {
-      color: var(--muted);
+      color: var(--gold);
       text-decoration: none;
       font-size: .82rem;
       letter-spacing: .12em;
@@ -85,12 +85,12 @@
       transition: color .2s;
     }
 
-    .nav-links a:hover { color: var(--teal); }
+    .nav-links a:hover { color: var(--gold-light); }
 
     .btn-nav {
       background: transparent;
-      border: 1.5px solid var(--teal);
-      color: var(--teal);
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
       padding: 9px 22px;
       font-family: 'DM Sans', sans-serif;
       font-size: .8rem;
@@ -101,7 +101,7 @@
     }
 
     .btn-nav:hover {
-      background: var(--teal);
+      background: var(--gold);
       color: var(--navy);
     }
 
@@ -480,10 +480,16 @@
     }
 
     /* ── PRICING ── */
-    .pricing {
+    .section {
       position: relative;
       z-index: 1;
+    }
+
+    .container {
       padding: 100px 5vw;
+    }
+
+    .pricing {
       background: rgba(11,20,55,.4);
     }
 
@@ -568,7 +574,7 @@
       flex-shrink: 0;
     }
 
-    .btn-full {
+    .btn-full, a.btn-full { text-decoration: none; display: block; text-align: center;
       width: 100%;
       padding: 13px;
       font-family: 'DM Sans', sans-serif;
@@ -579,25 +585,25 @@
       transition: all .2s;
     }
 
-    .btn-full.outline {
+    .btn-full.outline, a.btn-full.outline {
       background: transparent;
       border: 1px solid rgba(46,196,196,.3);
       color: var(--teal);
     }
 
-    .btn-full.outline:hover {
+    .btn-full.outline:hover, a.btn-full.outline:hover {
       background: rgba(46,196,196,.1);
       border-color: var(--teal);
     }
 
-    .btn-full.solid {
+    .btn-full.solid, a.btn-full.solid {
       background: linear-gradient(135deg, var(--teal), var(--teal-dim));
       border: none;
       color: var(--navy);
       font-weight: 500;
     }
 
-    .btn-full.solid:hover { opacity: .88; }
+    .btn-full.solid:hover, a.btn-full.solid:hover { opacity: .88; }
 
     /* ── CONTACT ── */
     .contact {
@@ -821,49 +827,67 @@
 </section>
 
 <!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="section-eyebrow">Pricing</div>
-  <h2 class="section-title">Simple, transparent plans.</h2>
+<section id="pricing" class="section pricing">
+  <div class="container">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title">Compliance, without compromise.</h2>
+    <p class="subtitle" style="color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:60px;max-width:600px;">Pricing scales capacity and integration — not outcomes.</p>
   <div class="pricing-grid">
     <div class="price-card">
-      <div class="price-plan">Starter</div>
-      <div class="price-amount"><sup>RM</sup>490</div>
+      <div class="price-plan">Standard</div>
+      <div class="price-amount">From <sup>RM</sup>490</div>
       <div class="price-period">per project / month</div>
       <ul class="price-features">
-        <li>Up to 3 active projects</li>
-        <li>ITP &amp; QCP generation</li>
-        <li>Evidence register</li>
-        <li>MY jurisdiction rules</li>
-        <li>Email support</li>
+        <li>1–2 active projects</li>
+        <li>Evidence upload (PDF, DWG, IFC, XLSX)</li>
+        <li>NCC / regulatory drawing checks</li>
+        <li>AI&#8209;assisted evidence classification</li>
+        <li>Governance scoring &amp; gap identification</li>
+        <li>Narrative audit reports</li>
+        <li>PDF &amp; DOCX exports</li>
+        <li>Secure audit logs (90&#8209;day retention)</li>
       </ul>
-      <button class="btn-full outline">Get Started</button>
+      <a href="https://buy.stripe.com/test_6oU14p8cke6k0Fr1Fp6oo01" target="_blank" class="btn-full outline">Get started</a>
     </div>
     <div class="price-card featured">
-      <div class="price-plan">Professional</div>
-      <div class="price-amount"><sup>RM</sup>1,490</div>
+      <div class="price-plan">Pro</div>
+      <div class="price-amount">From <sup>RM</sup>1,490</div>
       <div class="price-period">per project / month</div>
       <ul class="price-features">
-        <li>Unlimited projects</li>
-        <li>AI audit engine</li>
-        <li>Multi-jurisdiction support</li>
-        <li>Phase gate control</li>
-        <li>Priority support + onboarding</li>
+        <li>10–50 active projects</li>
+        <li>High&#8209;volume audit runs</li>
+        <li>Batch drawing checks</li>
+        <li>Automated evidence processing</li>
+        <li>SharePoint import &amp; export</li>
+        <li>Custom report branding (presentation only)</li>
+        <li>Scheduled audits</li>
+        <li>12&#8209;month audit log retention</li>
+        <li>Priority support</li>
       </ul>
-      <button class="btn-full solid">Start Free Trial</button>
+      <a href="https://buy.stripe.com/test_6oUbJ39go6DS5ZLesb6oo02" target="_blank" class="btn-full solid">Start Pro</a>
     </div>
     <div class="price-card">
       <div class="price-plan">Enterprise</div>
       <div class="price-amount">Custom</div>
-      <div class="price-period">volume &amp; custom rules</div>
+      <div class="price-period">tailored engagement</div>
       <ul class="price-features">
-        <li>Dedicated tenant environment</li>
-        <li>Custom jurisdiction rules</li>
-        <li>API access &amp; integrations</li>
-        <li>SLA &amp; dedicated CSM</li>
-        <li>On-premise option</li>
+        <li>Unlimited projects &amp; audit runs</li>
+        <li>Multi&#8209;tenant segregation</li>
+        <li>API access (read/write, governed)</li>
+        <li>Native Microsoft 365 / SharePoint sync</li>
+        <li>Custom pipeline configurations</li>
+        <li>Long&#8209;term retention (7+ years)</li>
+        <li>Audit log export for regulators</li>
+        <li>SSO / Entra ID</li>
+        <li>Contractual SLAs &amp; onboarding</li>
       </ul>
-      <button class="btn-full outline">Contact Sales</button>
+      <a href="#contact" class="btn-full outline">Contact sales</a>
     </div>
+  </div>
+  <div class="pricing-note" style="margin-top:48px;padding:28px 32px;background:rgba(15,30,78,.4);border:1px solid rgba(46,196,196,.1);max-width:860px;margin-left:auto;margin-right:auto;">
+    <p style="color:var(--white);font-size:.88rem;line-height:1.7;margin-bottom:10px;"><strong>What's the same for everyone:</strong> identical evidence standards, scoring thresholds, and non&#8209;determination safeguards. No plan can buy a different outcome.</p>
+    <p style="color:var(--muted);font-size:.82rem;line-height:1.6;">LuxGov scales capacity, speed, and integration — never truth.</p>
+  </div>
   </div>
 </section>
 
